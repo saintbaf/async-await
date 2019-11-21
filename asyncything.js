@@ -3,7 +3,7 @@
   const productsEndpoint = '... ... ... /product-endpoint-tester';
 
   async function getProducts() {  
-     try {  
+     try {        
         const result = await fetch(productsEndpoint);
         console.log('Fetch Endpoint promise resolved \n');    
         console.log(result);
@@ -20,12 +20,11 @@
         console.log('A wild SNAFU appears \n');
         console.log('FUBAReason: ', error);
         console.log('~~~~~ \n \n'); 
-     }
-    
+     }   
   }
    
   // Iterate the products
-  function iterateProducts(data) {
+  async function iterateProducts(data) {
     
     for (i in data.products) {
       for (const [key, value] of Object.entries(data.products[i])) {
