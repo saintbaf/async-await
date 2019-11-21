@@ -14,7 +14,7 @@
         console.log(typeof data, data);  
         console.log('~~~~~ \n \n'); 
       
-        iterateProducts(data);
+        await iterateProducts(data);
 
      } catch(error) {  
         console.log('A wild SNAFU appears \n');
